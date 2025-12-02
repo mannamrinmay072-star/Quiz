@@ -153,7 +153,7 @@ try {
   options = JSON.parse(currentQuestion.options);
 } catch {
   // fallback if it's CSV
-  options = currentQuestion.options.split(",");
+  options = currentQuestion?.options.split(",");
 }
 
 
