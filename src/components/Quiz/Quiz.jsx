@@ -147,7 +147,15 @@ export default function Quiz() {
   }
 
   const currentQuestion = questions[currentQuestionIndex];
-  const options = JSON?.parse(currentQuestion?.options);
+  let options = [];
+
+try {
+  options = JSON.parse(currentQuestion.options);
+} catch {
+  // fallback if it's CSV
+  options = currentQuestion.options.split(",");
+}
+
 
   return (
     <div className="quiz-container">
