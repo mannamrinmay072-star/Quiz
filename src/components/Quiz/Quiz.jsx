@@ -147,7 +147,7 @@ export default function Quiz() {
   }
 
   const currentQuestion = questions[currentQuestionIndex];
-  const options = JSON.parse(currentQuestion.options);
+  const options = JSON?.parse(currentQuestion?.options);
 
   return (
     <div className="quiz-container">
